@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Alto Detail</title>
+  <meta name="description" content="An example enquiry form for Alto Detail. This concept form does not send a message or collect details.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../../fonts/big-shoulders-display-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="concept-rail"><a href="../../work.html">Concept project by WEBAUR</a><span aria-hidden="true">·</span> Not a real studio</div>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="wordmark" href="index.html"><span class="wm">ALTO</span><span class="sub">Detail</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section-tight">
+      <div class="wrap section-head">
+        <p class="eyebrow">Contact</p>
+        <h1>Request a place in the bay.</h1>
+        <p class="lead">On a commissioned website this page would reach the workshop. Here, the form is a demonstration: it does not send a message, book a slot, or collect your details.</p>
+      </div>
+      <div class="wrap contact-grid">
+        <aside class="studio-card">
+          <p class="eyebrow">Example studio</p>
+          <h2>Alto Detail</h2>
+          <p>Telakkakatu 12<br>00150 Helsinki<br>Finland</p>
+          <p class="muted" style="margin-top:1rem">This address is invented. There is no workshop at this location, and it should not be entered into a map as if it were a business.</p>
+          <div style="margin-top:1.25rem">
+            <picture>
+      <source type="image/avif" srcset="images/wipe-800.avif 800w, images/wipe-1400.avif 1400w" sizes="(max-width:1023px) 100vw, 28vw">
+      <source type="image/webp" srcset="images/wipe-800.webp 800w, images/wipe-1400.webp 1400w" sizes="(max-width:1023px) 100vw, 28vw">
+      <img src="images/wipe-800.jpg" srcset="images/wipe-800.jpg 800w, images/wipe-1400.jpg 1400w" sizes="(max-width:1023px) 100vw, 28vw" alt="A technician wiping a black car in an indoor detailing bay" width="1400" height="933" decoding="async" loading="lazy">
+    </picture>
+          </div>
+        </aside>
+        <form class="enquiry" id="enquiry" novalidate>
+          <p class="form-banner">Concept project — this form does not send. Submitting it will only show a confirmation on this page.</p>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name"></div>
+          <div class="row">
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="phone">Telephone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field">
+            <label for="package">Programme</label>
+            <select id="package" name="package">
+              <option value="unsure">Not sure yet</option>
+              <option value="essential">Essential — example from €189</option>
+              <option value="signature">Signature — example from €349</option>
+              <option value="atelier">Atelier — example from €590</option>
+            </select>
+          </div>
+          <div class="field"><label for="car">The car (optional)</label><input id="car" name="car" type="text" placeholder="e.g. make, model, year"></div>
+          <div class="field"><label for="message">A note</label><textarea id="message" name="message"></textarea></div>
+          <p><button class="btn" type="submit">Submit an enquiry</button></p>
+          <p class="form-status" hidden tabindex="-1"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="wordmark"><span class="wm">ALTO</span><span class="sub">Detail</span></p>
+        <p class="muted" style="margin-top:1rem;max-width:28rem">A fictional studio for paint correction, protection and interior care. Designed by WEBAUR as a concept, not as a workshop you can book.</p>
+      </div>
+      <div>
+        <h2>The workshop</h2>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>A fictional address</h2>
+        <p>Telakkakatu 12<br>00150 Helsinki<br>Finland</p>
+        <p class="muted" style="margin-top:.75rem">There is no workshop at this address.</p>
+      </div>
+    </div>
+    <div class="wrap legal">
+      <span>Concept project — not a real studio</span>
+      <a href="../../work.html">Designed by WEBAUR</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

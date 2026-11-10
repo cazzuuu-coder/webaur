@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — Maison Café</title>
+  <meta name="description" content="An example menu for Maison Café, a concept project by WEBAUR. Prices are illustrative and cannot be ordered.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../../fonts/bodoni-moda-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/manrope-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="concept-mark" href="../../work.html">Concept project by WEBAUR</a>
+      <a class="wordmark" href="index.html"><em>Maison</em> <span>Café</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="room.html">The room</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="visit.html">Visit</a></li>
+      </ul>
+    </div>
+  </header>
+  <main id="main">
+    <header class="wrap menu-hero">
+      <div>
+        <p class="eyebrow">From the counter</p>
+        <h1>The <em>menu.</em></h1>
+        <p class="deck">Written the way a neighbourhood café might speak: short, specific, and changed by the day. Everything here is an example, set for this concept.</p>
+        <p class="menu-note">Prices are examples in euros, shown without a live offer. They do not belong to a real kitchen, and they cannot be ordered from this page.</p>
+        <ul class="menu-index">
+          <li><a href="#coffee">Coffee &amp; tea</a></li>
+          <li><a href="#bakery">Bakery</a></li>
+          <li><a href="#midday">Midday</a></li>
+          <li><a href="#sweet">Something sweet</a></li>
+          <li><a href="#glass">By the glass</a></li>
+        </ul>
+      </div>
+      <figure>
+        <picture>
+      <source type="image/avif" srcset="images/croissant-1400.avif 1400w" sizes="(max-width:1023px) 100vw, 48vw">
+      <source type="image/webp" srcset="images/croissant-800.webp 800w, images/croissant-1400.webp 1400w" sizes="(max-width:1023px) 100vw, 48vw">
+      <img src="images/croissant-800.jpg" srcset="images/croissant-800.jpg 800w, images/croissant-1400.jpg 1400w" sizes="(max-width:1023px) 100vw, 48vw" alt="Two butter croissants, photographed as a still life" width="1400" height="1120" decoding="async" fetchpriority="high">
+    </picture>
+        <figcaption>The morning bakery, as it might be written on the board.</figcaption>
+      </figure>
+    </header>
+
+    <section class="section-tight">
+      <div class="wrap menu-spread">
+        <div>
+          <section class="menu-cat" id="coffee">
+            <h2>Coffee <em>&amp; tea</em></h2>
+            <p class="cat-dek">A short bar. Milk when you ask for it, oat as a matter of course.</p>
+                      <div class="item">
+            <div class="item-name">Filter</div>
+            <div class="item-price">3.20 <small>example</small></div>
+            <div class="item-desc">A rotating brew, served in a generous cup.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Espresso</div>
+            <div class="item-price">3.00 <small>example</small></div>
+            <div class="item-desc">Short, and nothing added unless you say so.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">House latte</div>
+            <div class="item-price">4.20 <small>example</small></div>
+            <div class="item-desc">The everyday cup, finished at the bar.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Chocolate</div>
+            <div class="item-price">4.00 <small>example</small></div>
+            <div class="item-desc">Warm, not too sweet.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Leaf tea</div>
+            <div class="item-price">3.40 <small>example</small></div>
+            <div class="item-desc">A pot, left on the table.</div>
+          </div>
+          </section>
+          <section class="menu-cat" id="bakery">
+            <h2>Bakery</h2>
+            <p class="cat-dek">The morning list, imagined as something that would sell out without a fuss.</p>
+                      <div class="item">
+            <div class="item-name">Cardamom bun</div>
+            <div class="item-price">4.20 <small>example</small></div>
+            <div class="item-desc">Butter, sugar, warm spice.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Butter croissant</div>
+            <div class="item-price">4.00 <small>example</small></div>
+            <div class="item-desc">Shatter, then a soft middle.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Sourdough &amp; jam</div>
+            <div class="item-price">5.50 <small>example</small></div>
+            <div class="item-desc">The day’s loaf, a seasonal preserve.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Yoghurt, rye &amp; honey</div>
+            <div class="item-price">6.80 <small>example</small></div>
+            <div class="item-desc">Toasted seeds, a slow start.</div>
+          </div>
+          </section>
+          <section class="menu-cat" id="midday">
+            <h2>Midday</h2>
+            <p class="cat-dek">A kitchen that stays modest: soup, a green plate, toast if you come late.</p>
+                      <div class="item">
+            <div class="item-name">Season soup</div>
+            <div class="item-price">9.50 <small>example</small></div>
+            <div class="item-desc">Bread on the side.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Green plate</div>
+            <div class="item-price">12.00 <small>example</small></div>
+            <div class="item-desc">Leaves, grains, a sharp dressing.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Toast, late</div>
+            <div class="item-price">8.50 <small>example</small></div>
+            <div class="item-desc">Cheese or tomato, depending on the day.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Eggs, greens &amp; toast</div>
+            <div class="item-price">11.00 <small>example</small></div>
+            <div class="item-desc">The lunch that looks like breakfast, if you want it.</div>
+          </div>
+          </section>
+          <section class="menu-cat" id="sweet">
+            <h2>Something <em>sweet</em></h2>
+            <p class="cat-dek">One or two things, not a pastry case that tries to do everything.</p>
+                      <div class="item">
+            <div class="item-name">Chocolate cake</div>
+            <div class="item-price">6.00 <small>example</small></div>
+            <div class="item-desc">A narrow slice, meant to be eaten slowly.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">Fruit tart</div>
+            <div class="item-price">6.50 <small>example</small></div>
+            <div class="item-desc">When the fruit is worth it.</div>
+          </div>
+          </section>
+          <section class="menu-cat" id="glass">
+            <h2>By the <em>glass</em></h2>
+            <p class="cat-dek">Only in the version of this room that stays open into the evening — and only as an example.</p>
+                      <div class="item">
+            <div class="item-name">Wine, by the glass</div>
+            <div class="item-price">7.00 <small>example</small></div>
+            <div class="item-desc">A quiet red or a cold white, depending on the season.</div>
+          </div>
+                      <div class="item">
+            <div class="item-name">The iced cup</div>
+            <div class="item-price">4.40 <small>example</small></div>
+            <div class="item-desc">Coffee, milk, a long afternoon.</div>
+          </div>
+          </section>
+        </div>
+        <aside class="menu-plates">
+          <figure>
+            <picture>
+      <source type="image/avif" srcset="images/latte-1400.avif 1400w" sizes="(max-width:1023px) 100vw, 28rem">
+      <source type="image/webp" srcset="images/latte-800.webp 800w, images/latte-1400.webp 1400w" sizes="(max-width:1023px) 100vw, 28rem">
+      <img src="images/latte-800.jpg" srcset="images/latte-800.jpg 800w, images/latte-1400.jpg 1400w" sizes="(max-width:1023px) 100vw, 28rem" alt="Three pale-blue cups of latte with leaf-patterned foam, arranged on a wooden table among potted plants" width="1400" height="2100" decoding="async" loading="lazy">
+    </picture>
+            <figcaption>The house latte, among the plants.</figcaption>
+          </figure>
+          <figure>
+            <picture>
+      <source type="image/avif" srcset="images/midday-1400.avif 1400w" sizes="(max-width:1023px) 100vw, 28rem">
+      <source type="image/webp" srcset="images/midday-800.webp 800w, images/midday-1400.webp 1400w" sizes="(max-width:1023px) 100vw, 28rem">
+      <img src="images/midday-800.jpg" srcset="images/midday-800.jpg 800w, images/midday-1400.jpg 1400w" sizes="(max-width:1023px) 100vw, 28rem" alt="A dark plate of toast with spinach, sliced avocado and soft-boiled eggs, finished with pepper and a sprig of herbs" width="1400" height="1410" decoding="async" loading="lazy">
+    </picture>
+            <figcaption>A midday plate, as it might be written on the board.</figcaption>
+          </figure>
+          <figure>
+            <picture>
+      <source type="image/avif" srcset="images/iced-1400.avif 1400w" sizes="(max-width:1023px) 100vw, 28rem">
+      <source type="image/webp" srcset="images/iced-800.webp 800w, images/iced-1400.webp 1400w" sizes="(max-width:1023px) 100vw, 28rem">
+      <img src="images/iced-800.jpg" srcset="images/iced-800.jpg 800w, images/iced-1400.jpg 1400w" sizes="(max-width:1023px) 100vw, 28rem" alt="A tall glass of iced coffee, with milk swirling through the dark brew, standing on a stone counter" width="1400" height="934" decoding="async" loading="lazy">
+    </picture>
+            <figcaption>The long afternoon cup.</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-tight band-foam">
+      <div class="wrap invite">
+        <div>
+          <p class="eyebrow">A table</p>
+          <h2>Nothing on this list <em>can be ordered.</em></h2>
+          <p class="deck">The visit page explains the hours as a concept, and why a reservation cannot be made from this site.</p>
+        </div>
+        <div class="actions"><a class="btn" href="visit.html#reserve">About reserving</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <a class="wordmark" href="index.html"><em>Maison</em> <span>Café</span></a>
+      <p>A concept project by <a href="../../work.html">WEBAUR</a> — not a real café.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

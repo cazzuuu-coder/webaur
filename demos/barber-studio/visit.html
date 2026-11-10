@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visit — Hale Barber Studio</title>
+  <meta name="description" content="Hours, a fictional Helsinki address, and a clear note that Hale Barber Studio cannot take real bookings.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../../fonts/cormorant-garamond-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="concept-rail"><a href="../../work.html">Concept project by WEBAUR</a><span class="dot" aria-hidden="true">·</span> Not a real studio</div>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        <span class="monogram" aria-hidden="true">H</span>
+        <span>
+          <span class="logo-name">Hale</span>
+          <span class="logo-sub">Barber Studio</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="barbers.html">The barber</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="visit.html" aria-current="page">Visit</a></li>
+        <li><a class="btn nav-cta btn-brass" href="visit.html#booking">Reserve a chair</a></li>
+      </ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-pad section-tight">
+      <div class="wrap visit-grid">
+        <div>
+          <p class="eyebrow">Visit</p>
+          <h1>How a visit <em>would work.</em></h1>
+          <p class="lead">Hours, a written address, and a booking line — presented as they would be on a live studio site, then labelled honestly as a concept.</p>
+          <h2 style="margin-top:2.5rem">Hours</h2>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Monday</th><td class="closed">Closed</td></tr>
+              <tr><th scope="row">Tuesday</th><td>10:00–19:00</td></tr>
+              <tr><th scope="row">Wednesday</th><td>10:00–19:00</td></tr>
+              <tr><th scope="row">Thursday</th><td>10:00–19:00</td></tr>
+              <tr><th scope="row">Friday</th><td>10:00–19:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>10:00–16:00</td></tr>
+              <tr><th scope="row">Sunday</th><td class="closed">Closed</td></tr>
+            </tbody>
+          </table>
+          <h2 style="margin-top:2rem">The room</h2>
+          <p class="address">3 Ateljeekuja<br>00100 Helsinki</p>
+          <p class="muted">There is no shop at this address. It is written so the page has the shape of a real visit, and should not be entered into a map as if it were a business.</p>
+        </div>
+        <div>
+          <picture>
+      <source type="image/avif" srcset="images/chairs-800.avif 800w, images/chairs-1600.avif 1600w" sizes="(max-width: 1023px) 100vw, 46vw">
+      <source type="image/webp" srcset="images/chairs-800.webp 800w, images/chairs-1600.webp 1600w" sizes="(max-width: 1023px) 100vw, 46vw">
+      <img src="images/chairs-800.jpg" srcset="images/chairs-800.jpg 800w, images/chairs-1600.jpg 1600w" sizes="(max-width: 1023px) 100vw, 46vw" alt="A row of black leather barber chairs beside wooden tool benches and lighted mirrors" width="1600" height="2400" decoding="async" fetchpriority="high">
+    </picture>
+          <p class="caption">The room, from the same licensed sitting used throughout this concept.</p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="booking" id="booking">
+          <strong>Reserve a chair — in a living project.</strong>
+          <p>Hale Barber Studio is a demonstration website designed by <a href="../../work.html">WEBAUR</a>. The form below does not send a request, open a calendar, or book an appointment. On a live site, this is where the studio’s real booking tool would sit.</p>
+          <form class="demo-form" id="booking-form" novalidate>
+            <div class="row">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name"></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option value="cut">The cut — example, 45 min</option>
+                  <option value="fade">Skin fade — example, 50 min</option>
+                  <option value="cut-beard">Cut &amp; beard — example, 70 min</option>
+                  <option value="shave">Traditional shave — example, 40 min</option>
+                </select>
+              </div>
+              <div class="field"><label for="when">Preferred day (optional)</label><input id="when" name="when" type="text" placeholder="e.g. Thursday afternoon"></div>
+            </div>
+            <div class="field"><label for="note">A note (optional)</label><textarea id="note" name="note"></textarea></div>
+            <p><button class="btn" type="submit">Send a request</button></p>
+            <p class="form-status" hidden tabindex="-1"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <p class="logo-name">Hale</p>
+        <p class="logo-sub" style="color:#b7b0a6;margin:0 0 1rem">Barber Studio</p>
+        <p>A contemporary studio concept for a Helsinki side street. Designed by WEBAUR. The shop itself is not real.</p>
+      </div>
+      <div class="foot-col">
+        <h2>The studio</h2>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="barbers.html">The barber</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h2>A fictional address</h2>
+        <p>3 Ateljeekuja<br>00100 Helsinki</p>
+        <p style="margin-top:.75rem">There is no shop at this address. Hale is a concept project, not a business you can visit.</p>
+      </div>
+    </div>
+    <div class="wrap foot-legal">
+      <span>Concept project — not a real shop</span>
+      <a href="../../work.html">Designed by WEBAUR</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
