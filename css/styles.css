@@ -468,3 +468,150 @@ form.contact-form{display:grid;gap:16px;background:var(--bg-2);border:1px solid 
 
 .folio-hale .folio-frames figcaption{color:#5A564C}
 .folio-maison .folio-cap,.folio-maison .folio-frames figcaption{color:#6A5E50}
+
+/* ===== v6.1 — contact, mobile and detail polish ===== */
+.footer-note{margin-top:16px;max-width:28rem}
+.footer-email a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+.price-more{margin-top:28px;color:var(--muted);font-size:15px;max-width:48rem}
+.price-more a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:4px;white-space:nowrap}
+.prose a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px}
+.prose-date{margin-top:24px;font-size:14px}
+.lead a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:4px}
+
+/* Contact */
+.contact-section{padding-top:clamp(16px,3vw,32px)}
+.contact-aside{display:grid;gap:32px;align-content:start}
+.contact-card{padding:0 0 28px;border-bottom:1px solid var(--line)}
+.contact-label,.contact-facts dt{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.contact-email{font-family:var(--display);font-size:clamp(30px,3.6vw,44px);letter-spacing:-.02em;line-height:1.1;margin:8px 0 12px;overflow-wrap:anywhere}
+.contact-email a{text-decoration:none;background-image:linear-gradient(var(--accent),var(--accent));background-size:100% 2px;background-position:0 100%;background-repeat:no-repeat;padding-bottom:2px}
+.contact-email a:hover{color:var(--accent)}
+.contact-facts{display:grid;gap:0;margin:0}
+.contact-facts div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.contact-facts dd{margin:0;font-size:15px}
+.contact-facts dd a{text-decoration-color:var(--accent);text-underline-offset:3px}
+.contact-next h2{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:-.02em;margin-bottom:12px}
+.contact-next ol{list-style:none;counter-reset:n;display:grid;gap:10px}
+.contact-next li{counter-increment:n;display:grid;grid-template-columns:32px 1fr;color:var(--muted);font-size:15px}
+.contact-next li::before{content:"0" counter(n);font-family:var(--display);color:var(--accent);font-size:18px;line-height:1.4}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field input,.field select,.field textarea{font-size:16px;min-height:48px}
+.btn-block{width:100%;min-height:52px}
+.consent{line-height:1.5;cursor:pointer}
+.consent input{appearance:auto;width:22px;height:22px;flex:0 0 22px;margin:0}
+.form-note{line-height:1.55}
+.form-note a{color:var(--ink);text-underline-offset:3px}
+.form-alert a{color:var(--ink);text-decoration-color:var(--accent);font-weight:600}
+.form-alert.is-info{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--bg-3))}
+
+/* Readability floor for small caps labels */
+.eyebrow,.badge,.popular,.footer-col strong{font-size:12px}
+.folio-frames figcaption,.folio-cap,.folio-thumbs figcaption,.work-index-item span{font-size:12px}
+
+/* Tap targets and safe areas */
+.site-header{padding-top:env(safe-area-inset-top,0px);height:calc(var(--nav-h) + env(safe-area-inset-top,0px))}
+.logo{min-height:44px;align-items:center;padding-right:8px}
+.teaser-link{display:inline-flex;align-items:center;min-height:44px;padding-bottom:0;border-bottom:0;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:6px;text-decoration-thickness:1px}
+.faq summary{padding:10px 0;min-height:44px;line-height:1.4}
+.faq details{padding:8px 0}
+.site-footer{padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))}
+
+@media (max-width:1023px){
+  .contact-facts div{grid-template-columns:130px 1fr}
+}
+@media (max-width:767px){
+  body{font-size:16px}
+  .lead{font-size:17px;line-height:1.6}
+  .section{padding:56px 0}
+  .page-hero{padding:32px 0 16px}
+  .display{font-size:clamp(36px,10.4vw,52px);line-height:1.04}
+  .section-title{font-size:clamp(30px,8.6vw,40px);line-height:1.1}
+
+  /* Mobile menu: full-height sheet, large targets, safe-area aware */
+  .nav-panel{inset:calc(var(--nav-h) + env(safe-area-inset-top,0px)) 0 0 0;padding:12px var(--pad) calc(32px + env(safe-area-inset-bottom,0px));gap:20px;border-top:1px solid var(--line)}
+  .nav-links{width:100%;gap:0}
+  .nav-links li{border-bottom:1px solid var(--line)}
+  .nav-links a{display:flex;align-items:center;min-height:60px;padding:6px 0;border-bottom:0;font-size:30px}
+  .nav-links a[aria-current="page"]{color:var(--accent);border-bottom:0}
+  .nav-panel .lang-switch{font-size:14px;gap:4px}
+  .lang-switch a,.lang-switch span[aria-current]{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+  .nav-cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;font-size:16px}
+
+  .btn{min-height:48px}
+  .hero-grid{gap:40px}
+  .hero .lead{margin-bottom:24px}
+  .btn-row .btn{flex:1 1 auto}
+
+  /* Home: tighter rhythm */
+  .trust-item,.trust-item:nth-child(3n+2),.trust-item:nth-child(3n){padding:20px 0}
+  .trust-item h3{font-size:23px;margin-bottom:6px}
+  .home-services .service-row ul{display:none}
+  .home-services .service-row{padding-block:28px;gap:10px}
+  .service-row .num{font-size:44px}
+  .service-row h3,.service-row h2{font-size:28px}
+  .teaser-featured{margin-bottom:48px}
+  .home-teaser-foot{margin-top:40px}
+  .process-step{padding:20px 0}
+  .process-step .num{font-size:34px}
+  .process-step h3{font-size:24px}
+  .process-step.is-last{padding:22px 18px}
+  .price-card{padding:24px 20px}
+  .price-card ul{margin:16px 0 22px}
+  .price-notes{gap:24px;margin-top:32px}
+  .cta-band{padding:72px 0}
+
+  /* Footer: two columns instead of one long stack */
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px 20px;padding-bottom:28px}
+  .footer-grid > div:first-child,.footer-grid > div:last-child{grid-column:1 / -1}
+  .footer-col{gap:0}
+  .footer-col li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer-col li.lang-switch{margin-top:4px !important}
+  .legal{flex-direction:column;gap:4px}
+
+  /* Work index and project frames: swipeable rows instead of tall stacks */
+  .work-index,.folio-frames{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(var(--pad)*-1);padding:0 var(--pad) 12px;scroll-padding-inline:var(--pad);-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .work-index{margin-top:32px}
+  .work-index > *,.folio-frames > *{flex:0 0 78%;scroll-snap-align:start}
+  .folio-project{padding:64px 0}
+  .folio-stage{margin:28px 0 32px}
+  .folio-actions{margin-top:28px}
+  .folio-actions .btn{flex:1 1 auto}
+  .folio-collage{gap:12px;margin-bottom:36px}
+
+  /* Case studies: phone overlaps the desktop frame, like the hero */
+  .walk{gap:56px}
+  .walk-pair{display:block;position:relative;padding-bottom:28px}
+  .walk-pair .device-desktop{width:88%}
+  .walk-pair .device-mobile{position:absolute;right:0;bottom:0;width:33%;max-width:150px;border-radius:16px;padding:6px 5px 8px}
+  .case-identity{padding:24px 20px;margin:36px 0}
+  .case-copy{gap:24px;margin:28px 0}
+  .swatches{gap:12px}
+  .swatch,.swatch i{width:72px}
+  .swatch i{height:56px}
+
+  /* Contact */
+  .field-row{grid-template-columns:1fr}
+  form.contact-form{padding:22px 18px;margin-inline:calc(var(--pad)*-.4)}
+  .contact-aside{gap:24px}
+  .contact-facts div{grid-template-columns:1fr;gap:2px}
+}
+@media (max-width:380px){
+  .btn-row{flex-direction:column}
+  .btn-row .btn{width:100%}
+}
+
+/* Header: blur lives on a pseudo-element so the fixed mobile menu is positioned
+   against the viewport (backdrop-filter on the header itself made the panel collapse). */
+:root{--pad:max(clamp(20px,4.5vw,48px), env(safe-area-inset-left,0px), env(safe-area-inset-right,0px))}
+.site-header,.site-header.is-scrolled{background:transparent;backdrop-filter:none}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:background .2s}
+.site-header.is-scrolled::before{background:color-mix(in srgb,var(--bg) 94%,transparent)}
+body.menu-open .site-header::before{background:var(--bg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media (min-width:768px) and (max-width:1023px){
+  .nav-links a{display:inline-flex;align-items:center;min-height:44px}
+  .lang-switch a,.lang-switch span[aria-current]{display:inline-flex;align-items:center;justify-content:center;min-width:28px;min-height:44px}
+  .nav-cta{display:inline-flex;align-items:center;min-height:44px}
+  .footer-col li a{display:inline-flex;align-items:center;min-height:44px}
+}

@@ -60,19 +60,20 @@
   }
   if (reduce) document.querySelectorAll(".reveal").forEach(function (el) { el.style.animation = "none"; });
 
-  // Reveal configured email; hide placeholders when unset.
+  // Email links are rendered in the HTML; js/site-config.js stays the source of truth.
   document.querySelectorAll("[data-email-slot]").forEach(function (slot) {
     if (!email) {
       var wrap = slot.closest(".js-email-wrap") || slot;
       wrap.hidden = true;
       return;
     }
-    var a = document.createElement("a");
+    var a = slot;
+    if (slot.tagName !== "A") {
+      a = document.createElement("a");
+      slot.replaceChildren(a);
+    }
     a.href = "mailto:" + email;
     a.textContent = email;
-    slot.replaceChildren(a);
-    var wrap = slot.closest(".js-email-wrap");
-    if (wrap) wrap.hidden = false;
   });
 
   var params = new URLSearchParams(window.location.search);
@@ -96,8 +97,11 @@
       sending: "Lähetetään…",
       success: "Kiitos, viestisi on vastaanotettu. Palaamme asiaan mahdollisimman pian.",
       error: "Lähetys ei onnistunut. Yritä uudelleen tai käytä sähköpostia, jos osoite on näkyvissä.",
-      mailto: "Sähköpostiohjelmasi pitäisi avautua valmiilla viestillä. Jos näin ei käy, kopioi viesti ja lähetä se osoitteeseen, joka näkyy tällä sivulla.",
-      unconfigured: "Yhteydenottolomaketta ei ole vielä kytketty lähetyspalveluun, eikä sähköpostiosoitetta ole julkaistu. Viestiä ei lähetetty. Lisää FORMSPREE_ID tai CONTACT_EMAIL tiedostoon js/site-config.js."
+      mailto: "Sähköpostiohjelmasi avautuu nyt, ja viesti on valmiiksi täytetty. Tarkista se ja paina siellä Lähetä. Viestiä ei ole lähetetty ennen sitä. Jos mitään ei avautunut, kirjoita suoraan osoitteeseen ",
+      unconfigured: "Lomakkeen lähetystä ei ole vielä otettu käyttöön, joten viestiä ei lähetetty. Yritä myöhemmin uudelleen.",
+      send: "Lähetä viesti",
+      subject: "Projektikysely",
+      yes: "kyllä", no: "ei"
     } : {
       required: "This field is required.",
       email: "Please enter a valid email address.",
@@ -105,16 +109,31 @@
       sending: "Sending…",
       success: "Thank you — your message has been received. We will get back to you as soon as we can.",
       error: "The message could not be sent. Please try again, or use the email address on this page if one is shown.",
-      mailto: "Your email app should open with a prepared message. If it does not, copy the message and send it to the address shown on this page.",
-      unconfigured: "This form is not connected to a sending service yet, and no public email address has been published. No message was sent. Add FORMSPREE_ID or CONTACT_EMAIL in js/site-config.js."
+      mailto: "Your email app is opening with the message filled in. Check it and press Send there — nothing has been sent until you do. If nothing opened, write directly to ",
+      unconfigured: "Sending is not switched on for this form yet, so no message was sent. Please try again later.",
+      send: "Send message",
+      subject: "Project enquiry",
+      yes: "yes", no: "no"
     };
 
-    function showAlert(kind, text) {
+    if (endpoint && submitBtn) {
+      submitBtn.textContent = i18n.send;
+      submitBtn.setAttribute("data-label", i18n.send);
+    }
+
+    function showAlert(kind, text, mail) {
       if (!alertBox) return;
       alertBox.hidden = false;
       alertBox.classList.remove("is-error", "is-success", "is-info");
       if (kind) alertBox.classList.add("is-" + kind);
       alertBox.textContent = text;
+      if (mail) {
+        var a = document.createElement("a");
+        a.href = "mailto:" + mail;
+        a.textContent = mail;
+        alertBox.appendChild(a);
+        alertBox.appendChild(document.createTextNode("."));
+      }
       alertBox.focus();
     }
 
@@ -133,30 +152,58 @@
       err.hidden = !text;
     }
 
+    function validateField(el) {
+      if (el.type === "checkbox") {
+        if (!el.checked) { msg(el, i18n.consent); return false; }
+      } else if (!el.value.trim()) { msg(el, i18n.required); return false; }
+      else if (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())) { msg(el, i18n.email); return false; }
+      msg(el, "");
+      return true;
+    }
+
     function validate() {
-      var ok = true;
+      var ok = true, first = null;
       form.querySelectorAll("[required]").forEach(function (el) {
-        if (el.type === "checkbox") {
-          if (!el.checked) { msg(el, i18n.consent); ok = false; } else msg(el, "");
-        } else if (!el.value.trim()) { msg(el, i18n.required); ok = false; }
-        else if (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) { msg(el, i18n.email); ok = false; }
-        else msg(el, "");
+        if (!validateField(el)) { ok = false; if (!first) first = el; }
       });
+      if (first) first.focus();
       return ok;
     }
 
+    // Validate a field only after the visitor has interacted with it, so errors
+    // never appear on fields they have not reached yet (and the layout stays put).
     form.querySelectorAll("[required]").forEach(function (el) {
-      el.addEventListener("blur", function () { validate(); });
+      el.addEventListener("blur", function () {
+        if (el.value.trim() || el.getAttribute("aria-invalid") === "true") validateField(el);
+      });
+      el.addEventListener(el.type === "checkbox" || el.tagName === "SELECT" ? "change" : "input", function () {
+        if (el.getAttribute("aria-invalid") === "true") validateField(el);
+      });
     });
+
+    function labelFor(el) {
+      var l = el.id && form.querySelector("label[for='" + el.id + "']");
+      var t = l ? l.textContent : el.name;
+      return t.replace(/\s*\((valinnainen|optional)\)\s*/i, "").trim();
+    }
+
+    function fieldValue(name) {
+      var el = form.elements[name];
+      return el ? String(el.value || "").trim() : "";
+    }
 
     function bodyText() {
       var lines = [];
+      var message = "";
       Array.from(form.elements).forEach(function (el) {
         if (!el.name || el.type === "submit" || el.name === "company-website") return;
-        if (el.type === "checkbox") lines.push(el.name + ": " + (el.checked ? "yes" : "no"));
-        else lines.push(el.name + ": " + (el.value || ""));
+        if (el.name === "message") { message = el.value.trim(); return; }
+        if (el.type === "checkbox") { lines.push((fi ? "Suostumus" : "Consent") + ": " + (el.checked ? i18n.yes : i18n.no)); return; }
+        var lbl = el.getAttribute("data-mail-label") || labelFor(el);
+        var v = el.tagName === "SELECT" ? (el.value ? el.options[el.selectedIndex].text : "") : el.value.trim();
+        if (v) lines.push(lbl + ": " + v);
       });
-      return lines.join("\n");
+      return (fi ? "Hei WEBAUR,\n\n" : "Hello WEBAUR,\n\n") + message + "\n\n---\n" + lines.join("\n") + "\n";
     }
 
     form.addEventListener("submit", function (e) {
@@ -189,12 +236,13 @@
       }
 
       if (email) {
-        var subject = fi ? "Yhteydenotto WEBAURille" : "Enquiry for WEBAUR";
-        var href = "mailto:" + encodeURIComponent(email) +
+        var business = fieldValue("business");
+        var subject = i18n.subject + (business ? " – " + business : "");
+        var href = "mailto:" + email +
           "?subject=" + encodeURIComponent(subject) +
           "&body=" + encodeURIComponent(bodyText());
+        showAlert("info", i18n.mailto, email);
         window.location.href = href;
-        showAlert("info", i18n.mailto);
         return;
       }
 

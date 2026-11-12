@@ -227,3 +227,47 @@ h3{font-size:1.15rem;letter-spacing:.04em;font-family:var(--sans);font-weight:60
   .pkg-table td{padding:.25rem 0}
   .pkg-table td:last-child{margin-top:.4rem}
 }
+
+/* v6.1 — mobile polish: menu containing block, readable labels, tap targets, safe areas */
+:root{--pad:max(clamp(1.15rem, 4vw, 3.25rem), env(safe-area-inset-left,0px), env(safe-area-inset-right,0px))}
+.site-header{background:transparent;backdrop-filter:none}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--bg) 86%, transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.wordmark{min-height:44px;align-items:center}
+@media (max-width:767px){
+  .concept-rail{font-size:.75rem;letter-spacing:.1em}
+  .concept-rail a{position:relative}
+  .concept-rail a::after{content:"";position:absolute;inset:-.75rem -.25rem}
+  .wordmark .sub{font-size:.75rem}
+  .eyebrow{font-size:.75rem}
+  .hero .eyebrow{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .hero-cutline{font-size:.75rem}
+  .btn{min-height:46px;font-size:.78rem}
+  .pkg-table th,.compare-labels,.site-footer h2{font-size:.75rem}
+  .pkg-price em,.pkg .price span{font-size:.75rem}
+  .pkg-table a{display:inline-flex;align-items:center;min-height:44px;font-size:.78rem;padding-bottom:0}
+  .field label{font-size:.75rem}
+  .site-nav{padding-bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))}
+  .site-nav li{border-bottom:1px solid var(--line)}
+  .site-nav a{display:flex;align-items:center;min-height:56px}
+  .site-footer a{display:inline-flex;align-items:center;min-height:44px}
+  .legal{padding-bottom:env(safe-area-inset-bottom,0px)}
+}
+.menu-toggle span{transition:transform .25s ease}
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+@media (min-width:768px) and (max-width:1023px){
+  .concept-rail{font-size:.75rem}
+  .concept-rail a{position:relative}
+  .concept-rail a::after{content:"";position:absolute;inset:-.75rem -.25rem}
+  .wordmark .sub,.eyebrow,.hero-cutline,.pkg-table th,.compare-labels,.site-footer h2,.pkg-price em,.pkg .price span,.field label{font-size:.75rem}
+  .site-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:.75rem}
+  .btn{min-height:44px;font-size:.78rem}
+  .pkg-table a{display:inline-flex;align-items:center;min-height:44px;font-size:.78rem;padding-bottom:0}
+  .site-footer a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media (max-width:767px){
+  .concept-rail{height:auto;min-height:var(--rail);padding:.45rem var(--pad);text-align:center;flex-wrap:wrap;row-gap:.15rem;line-height:1.35}
+}
+@media (max-width:400px){
+  .concept-rail{letter-spacing:.06em}
+}

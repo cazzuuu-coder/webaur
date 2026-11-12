@@ -1,29 +1,23 @@
-# WEBAUR website (v6)
+# WEBAUR website (v6.1)
 
 Independent web design studio site — static HTML, CSS and JavaScript. No required build step.
 
 Finnish is the default language at the site root. English lives in `/en/`. Studio pages are generated from `_tools/build_pages.py`. Concept demos in `demos/` were rebuilt in v6 with distinct typography, multi-page layouts and self-hosted fonts. They remain fictional concept projects.
 
-## Local preview (including the GitHub Pages subdirectory)
+## Hosting and local preview
 
-The public project is hosted under:
+Live at `https://cazzuuu-coder.github.io/webaur/` (repository `cazzuuu-coder/webaur`, repo root = this folder).
 
-`/halden-barbers-demo/webaur/`
-
-All internal links, images, fonts, CSS, JavaScript and demos use relative paths so they work in that folder, not only at a domain root.
+Internal links, images, fonts, CSS, JavaScript and demos use relative paths, so the site also works in any subfolder. The exception is `404.html`, which uses absolute `/webaur/…` paths because GitHub Pages serves it at whatever URL was missing.
 
 ```bash
-# from a parent folder that contains halden-barbers-demo/webaur/
+# from a parent folder that contains webaur/ (this folder)
 python3 -m http.server 8768 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8768/halden-barbers-demo/webaur/`.
+Open `http://127.0.0.1:8768/webaur/`.
 
-Canonical, Open Graph and sitemap URLs currently use the GitHub Pages origin:
-
-`https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/`
-
-When a custom domain is connected, update those URLs in `_tools/build_pages.py` (`SITE`) and regenerate, or edit `sitemap.xml`, `robots.txt` and the page tags directly.
+Canonical, Open Graph and sitemap URLs use `https://cazzuuu-coder.github.io/webaur/`. When a custom domain is connected, update `SITE` and `SITE_PATH` in `_tools/build_pages.py` and regenerate.
 
 ## Languages
 
@@ -51,20 +45,20 @@ Portfolio screenshots live in `images/work/{hale,alto,maison}/` as AVIF, WebP an
 
 **Pages:** `contact.html` and `en/contact.html`. Behaviour is in `js/main.js`.
 
-**Configuration — the only file to edit:** `js/site-config.js`
+**Configuration:** `js/site-config.js`
 
 ```js
 window.WEBAUR_SITE = {
-  CONTACT_EMAIL: "",  // e.g. "hello@example.com"
-  FORMSPREE_ID: ""    // e.g. "xxxxxxxx" or a full Formspree URL
+  CONTACT_EMAIL: "hello@webaur.com",
+  FORMSPREE_ID: ""
 };
 ```
 
-- If `FORMSPREE_ID` is set, the form POSTs via `fetch` to Formspree.
-- If only `CONTACT_EMAIL` is set, submit opens a prepared `mailto:` message.
-- If both are empty, the form shows an honest inline message and nothing is sent. Email links stay hidden until `CONTACT_EMAIL` is set.
+- With only `CONTACT_EMAIL` set (current setup), the form validates the fields and opens the visitor's own email app with a prepared message to that address (subject "Projektikysely – {business}" / "Project enquiry – {business}"). Nothing is sent until the visitor presses Send in their email app, and the page says so.
+- If `FORMSPREE_ID` is set, the form is sent through Formspree instead and the button label changes to "Lähetä viesti" / "Send message".
+- The address is also written into the HTML (footer, contact, privacy, thanks) by `_tools/build_pages.py` (`EMAIL`), so it shows without JavaScript. Keep the two values the same.
 
-There is no public email address on the site until that value is filled in. GitHub Pages cannot process forms by itself.
+**Important:** `webaur.com` must be registered and the `hello@` mailbox created before messages can arrive. Until then, emails sent to the address will bounce.
 
 Budget can be pre-filled with `?package=starter|business|premium#form`.
 
@@ -76,7 +70,7 @@ Starter / Aloitus €490, Business / Yritys €890 (recommended), Premium €1,4
 
 ## Still to complete before a full commercial launch
 
-- A real mailbox and, if desired, a Formspree form id in `js/site-config.js`
+- Register `webaur.com` and create the `hello@webaur.com` mailbox (the address is already on the site)
 - Legal name, business ID and postal address in the privacy policy
 - A native Finnish proofread
 - A custom domain, if one is connected, reflected in canonical URLs

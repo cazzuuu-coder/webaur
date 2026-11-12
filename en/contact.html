@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Contact — WEBAUR</title>
-  <meta name="description" content="Tell WEBAUR about your project. Start a conversation about a new website or a redesign." />
-  <link rel="canonical" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/en/contact.html" />
-  <link rel="alternate" hreflang="fi" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/contact.html" />
-  <link rel="alternate" hreflang="en" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/en/contact.html" />
-  <link rel="alternate" hreflang="x-default" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/contact.html" />
+
+  <meta name="description" content="Tell WEBAUR about your project. Email hello@webaur.com or use the form to start a conversation about a new website or a redesign." />
+  <link rel="canonical" href="https://cazzuuu-coder.github.io/webaur/en/contact.html" />
+  <link rel="alternate" hreflang="fi" href="https://cazzuuu-coder.github.io/webaur/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://cazzuuu-coder.github.io/webaur/en/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://cazzuuu-coder.github.io/webaur/contact.html" />
   <meta name="theme-color" content="#0E0F0C" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="Contact — WEBAUR" />
-  <meta property="og:description" content="Tell WEBAUR about your project. Start a conversation about a new website or a redesign." />
-  <meta property="og:url" content="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/en/contact.html" />
-  <meta property="og:image" content="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/images/og/og-default.jpg" />
+  <meta property="og:description" content="Tell WEBAUR about your project. Email hello@webaur.com or use the form to start a conversation about a new website or a redesign." />
+  <meta property="og:url" content="https://cazzuuu-coder.github.io/webaur/en/contact.html" />
+  <meta property="og:site_name" content="WEBAUR" />
+  <meta property="og:image" content="https://cazzuuu-coder.github.io/webaur/images/og/og-en.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="WEBAUR – Websites built to move businesses forward." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/images/og/og-default.jpg" />
+  <meta name="twitter:image" content="https://cazzuuu-coder.github.io/webaur/images/og/og-en.jpg" />
   <link rel="icon" href="../images/brand/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../images/brand/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="../images/brand/apple-touch-icon.png" />
@@ -42,71 +47,88 @@
 </header>
 <main id="content">
 
-<section class="page-hero">
+<section class="page-hero contact-hero">
   <div class="wrap">
     <p class="eyebrow">Contact</p>
     <h1 class="display">Tell us about your project.</h1>
-    <p class="lead">Share a little about the business and what you need. We will get in touch and walk through the next step together.</p>
+    <p class="lead">Share a little about the business and what you need. We reply by email and walk through the next step with you.</p>
   </div>
 </section>
-<section class="section" style="padding-top:0" id="form">
+<section class="section contact-section" id="form">
   <div class="wrap form-layout">
-    <div>
-      <div class="js-email-wrap" hidden>
-        <p>Prefer to write directly? Use the address below.</p>
-        <p style="margin:16px 0 24px"><span data-email-slot></span></p>
+    <aside class="contact-aside" aria-label="Contact details">
+      <div class="contact-card js-email-wrap">
+        <p class="contact-label">Email</p>
+        <p class="contact-email"><a href="mailto:hello@webaur.com" data-email-slot>hello@webaur.com</a></p>
+        <p class="muted">Write directly, or use the form — it prepares the email for you.</p>
       </div>
-      <p class="muted">The public site is hosted on GitHub Pages, which cannot process forms by itself. When a Formspree form id is set in <code>js/site-config.js</code>, this form is sent through Formspree. If only an email address is configured, submit opens a prepared email. If neither is set, you will see an honest message and nothing is sent. A message is never described as sent unless it actually was.</p>
-    </div>
-    <form class="contact-form" name="contact" action="#" method="post" novalidate>
-      <p class="hp"><label>Company website <input type="text" name="company-website" tabindex="-1" autocomplete="off" /></label></p>
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required />
+      <dl class="contact-facts">
+        <div><dt>Studio</dt><dd>Independent, based in Finland</dd></div>
+        <div><dt>How to reach us</dt><dd>By email</dd></div>
+        <div><dt>Prices</dt><dd><a href="../en/pricing.html">€490 / €890 / €1,490 + VAT</a></dd></div>
+      </dl>
+      <div class="contact-next">
+        <h2>What happens next</h2>
+        <ol>
+          <li>We read your message and reply by email.</li>
+          <li>We agree a short call to go through what you need.</li>
+          <li>You receive a written quote with the scope, price and timetable.</li>
+        </ol>
+      </div>
+    </aside>
+    <form class="contact-form" name="contact" action="mailto:hello@webaur.com" method="post" enctype="text/plain" novalidate>
+      <p class="hp" aria-hidden="true"><label>Company website <input type="text" name="company-website" tabindex="-1" autocomplete="off" /></label></p>
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="business">Business name</label>
+          <input id="business" name="business" type="text" autocomplete="organization" required />
+        </div>
       </div>
       <div class="field">
-        <label for="business">Business name</label>
-        <input id="business" name="business" type="text" autocomplete="organization" required />
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" data-mail-label="Email" required />
       </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required />
-      </div>
-      <div class="field">
-        <label for="type">Type of website</label>
-        <select id="type" name="type" required>
-          <option value="">Please select</option>
-          <option>New website</option>
-          <option>Redesign</option>
-          <option>Landing page</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="budget">Approximate budget (optional)</label>
-        <select id="budget" name="budget">
-          <option value="">I’d rather not say</option>
-          <option value="starter">Starter — about €490 + VAT</option>
-          <option value="business">Business — about €890 + VAT</option>
-          <option value="premium">Premium — about €1,490 + VAT</option>
-          <option value="unsure">I’m not sure yet</option>
-        </select>
+      <div class="field-row">
+        <div class="field">
+          <label for="type">Type of website</label>
+          <select id="type" name="type" required>
+            <option value="">Please select</option>
+            <option>New website</option>
+            <option>Redesign</option>
+            <option>Landing page</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">Package (optional)</label>
+          <select id="budget" name="budget">
+            <option value="">I’d rather not say</option>
+            <option value="starter">Starter — €490 + VAT</option>
+            <option value="business">Business — €890 + VAT</option>
+            <option value="premium">Premium — €1,490 + VAT</option>
+            <option value="unsure">Not sure yet — help me choose</option>
+          </select>
+        </div>
       </div>
       <div class="field">
         <label for="website">Current website (optional)</label>
-        <input id="website" name="website" type="url" autocomplete="url" placeholder="https://" />
+        <input id="website" name="website" type="url" autocomplete="url" inputmode="url" placeholder="https://" />
       </div>
       <div class="field">
-        <label for="message">Project description</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="message">About the project</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
       </div>
       <label class="consent">
         <input id="consent" type="checkbox" name="consent" value="yes" required />
         <span>I agree that WEBAUR may use this information to reply to my enquiry. Read the <a href="../en/privacy.html">privacy policy</a>.</span>
       </label>
-      <button class="btn btn-accent" type="submit" data-label="Send message">Send message</button>
-      <p class="form-note">The form will not claim that a message was sent unless a configured service has accepted it.</p>
-      <p class="form-alert" id="form-status" hidden tabindex="-1" role="status"></p>
+      <button class="btn btn-accent btn-block" type="submit" data-label="Open the email">Open the email</button>
+      <p class="form-note">The button opens your own email app with the message filled in. It is sent only when you press Send there. If nothing opens, write to <a href="mailto:hello@webaur.com" data-email-slot>hello@webaur.com</a>.</p>
+      <div class="form-alert" id="form-status" hidden tabindex="-1" role="status" aria-live="polite"></div>
     </form>
   </div>
 </section>
@@ -116,7 +138,7 @@
   <div class="wrap footer-grid">
     <div>
       <a class="logo" href="../en/index.html" aria-label="WEBAUR"><span class="wm">WEB<span class="wm-a">A</span>UR</span></a>
-      <p class="footer-note" style="margin-top:16px;max-width:28rem">Independent web design studio. We design and build modern websites that help businesses stand out and turn visitors into customers.</p>
+      <p class="footer-note">Independent web design studio. We design and build modern websites that help businesses stand out and turn visitors into customers.</p>
     </div>
     <div>
       <ul class="footer-col">
@@ -135,8 +157,8 @@
     </div>
     <div>
       <ul class="footer-col">
-        <li><strong>Contact</strong></li>
-        <li class="js-email-wrap" hidden>Email: <span data-email-slot></span></li>
+        <li><strong>Get in touch</strong></li>
+        <li class="js-email-wrap footer-email"><a href="mailto:hello@webaur.com" data-email-slot>hello@webaur.com</a></li>
         <li><a href="../en/contact.html">Contact</a></li>
         <li><a href="../en/privacy.html">Privacy Policy</a></li>
         <li class="lang-switch" style="margin-top:8px"><a href="../contact.html" lang="fi" hreflang="fi">FI</a><span class="sep" aria-hidden="true"> / </span><a href="../en/contact.html" lang="en" hreflang="en" aria-current="true">EN</a></li>
@@ -145,7 +167,7 @@
   </div>
   <div class="wrap legal">
     <span>© 2026 WEBAUR. All rights reserved.</span>
-    <span>Independent design studio.</span>
+    <span>Independent design studio based in Finland.</span>
   </div>
 </footer>
 <script src="../js/site-config.js"></script>

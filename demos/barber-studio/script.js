@@ -4,8 +4,14 @@
 
   var btn = document.querySelector(".menu-toggle");
   var panel = document.querySelector(".nav-links");
+  function pinPanel() {
+    var h = document.querySelector(".site-header");
+    if (!h || !panel) return;
+    panel.style.top = Math.max(0, Math.round(h.getBoundingClientRect().bottom)) + "px";
+  }
   function setOpen(open) {
     if (!btn || !panel) return;
+    if (open) pinPanel();
     btn.setAttribute("aria-expanded", String(open));
     btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     panel.classList.toggle("is-open", open);
@@ -19,7 +25,11 @@
       a.addEventListener("click", function () { setOpen(false); });
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") { setOpen(false); btn.focus(); }
+    });
+    window.addEventListener("resize", function () {
+      if (btn.getAttribute("aria-expanded") !== "true") return;
+      if (window.innerWidth > 767) setOpen(false); else pinPanel();
     });
   }
 

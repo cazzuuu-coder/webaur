@@ -2,22 +2,27 @@
 <html lang="fi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Yhteystiedot — WEBAUR</title>
-  <meta name="description" content="Kerro WEBAURille projektistasi. Aloita keskustelu uudesta verkkosivustosta tai uudistuksesta." />
-  <link rel="canonical" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/contact.html" />
-  <link rel="alternate" hreflang="fi" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/contact.html" />
-  <link rel="alternate" hreflang="en" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/en/contact.html" />
-  <link rel="alternate" hreflang="x-default" href="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/contact.html" />
+
+  <meta name="description" content="Kerro WEBAURille projektistasi. Kirjoita osoitteeseen hello@webaur.com tai käytä lomaketta, niin aloitetaan keskustelu uudesta sivustosta tai uudistuksesta." />
+  <link rel="canonical" href="https://cazzuuu-coder.github.io/webaur/contact.html" />
+  <link rel="alternate" hreflang="fi" href="https://cazzuuu-coder.github.io/webaur/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://cazzuuu-coder.github.io/webaur/en/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://cazzuuu-coder.github.io/webaur/contact.html" />
   <meta name="theme-color" content="#0E0F0C" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fi_FI" />
   <meta property="og:title" content="Yhteystiedot — WEBAUR" />
-  <meta property="og:description" content="Kerro WEBAURille projektistasi. Aloita keskustelu uudesta verkkosivustosta tai uudistuksesta." />
-  <meta property="og:url" content="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/contact.html" />
-  <meta property="og:image" content="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/images/og/og-default.jpg" />
+  <meta property="og:description" content="Kerro WEBAURille projektistasi. Kirjoita osoitteeseen hello@webaur.com tai käytä lomaketta, niin aloitetaan keskustelu uudesta sivustosta tai uudistuksesta." />
+  <meta property="og:url" content="https://cazzuuu-coder.github.io/webaur/contact.html" />
+  <meta property="og:site_name" content="WEBAUR" />
+  <meta property="og:image" content="https://cazzuuu-coder.github.io/webaur/images/og/og-fi.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="WEBAUR – Yrityksesi ansaitsee paremmat verkkosivut." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://cazzuuu-coder.github.io/halden-barbers-demo/webaur/images/og/og-default.jpg" />
+  <meta name="twitter:image" content="https://cazzuuu-coder.github.io/webaur/images/og/og-fi.jpg" />
   <link rel="icon" href="images/brand/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="images/brand/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png" />
@@ -42,71 +47,88 @@
 </header>
 <main id="content">
 
-<section class="page-hero">
+<section class="page-hero contact-hero">
   <div class="wrap">
     <p class="eyebrow">Yhteystiedot</p>
     <h1 class="display">Kerro projektistasi.</h1>
-    <p class="lead">Kerro hieman yrityksestäsi ja siitä, mitä tarvitset. Otamme yhteyttä ja käymme seuraavan askeleen yhdessä läpi.</p>
+    <p class="lead">Kerro hieman yrityksestäsi ja siitä, mitä tarvitset. Vastaamme sähköpostitse ja käymme seuraavan askeleen läpi kanssasi.</p>
   </div>
 </section>
-<section class="section" style="padding-top:0" id="form">
+<section class="section contact-section" id="form">
   <div class="wrap form-layout">
-    <div>
-      <div class="js-email-wrap" hidden>
-        <p>Haluatko mieluummin kirjoittaa suoraan? Käytä alla olevaa osoitetta.</p>
-        <p style="margin:16px 0 24px"><span data-email-slot></span></p>
+    <aside class="contact-aside" aria-label="Yhteystiedot">
+      <div class="contact-card js-email-wrap">
+        <p class="contact-label">Sähköposti</p>
+        <p class="contact-email"><a href="mailto:hello@webaur.com" data-email-slot>hello@webaur.com</a></p>
+        <p class="muted">Kirjoita suoraan tai käytä lomaketta, joka kokoaa viestin valmiiksi.</p>
       </div>
-      <p class="muted">Julkinen sivusto on GitHub Pages -alustalla, joka ei itse käsittele lomakkeita. Kun Formspree-tunnus on lisätty tiedostoon <code>js/site-config.js</code>, lomake lähetetään Formspreen kautta. Jos vain sähköpostiosoite on määritetty, lähetys avaa valmiin sähköpostiviestin. Jos kumpaakaan ei ole asetettu, näet rehellisen ilmoituksen eikä viestiä lähetetä. Viestiä ei koskaan väitetä lähetetyksi, ellei sitä ole oikeasti lähetetty.</p>
-    </div>
-    <form class="contact-form" name="contact" action="#" method="post" novalidate>
-      <p class="hp"><label>Company website <input type="text" name="company-website" tabindex="-1" autocomplete="off" /></label></p>
-      <div class="field">
-        <label for="name">Nimi</label>
-        <input id="name" name="name" type="text" autocomplete="name" required />
+      <dl class="contact-facts">
+        <div><dt>Studio</dt><dd>Itsenäinen, Suomessa</dd></div>
+        <div><dt>Yhteydenotto</dt><dd>Sähköpostitse</dd></div>
+        <div><dt>Hinnat</dt><dd><a href="pricing.html">490 € / 890 € / 1&nbsp;490 € + ALV</a></dd></div>
+      </dl>
+      <div class="contact-next">
+        <h2>Mitä seuraavaksi tapahtuu</h2>
+        <ol>
+          <li>Luemme viestisi ja vastaamme sähköpostitse.</li>
+          <li>Sovimme lyhyen keskustelun, jossa käydään tarpeesi läpi.</li>
+          <li>Saat kirjallisen tarjouksen, jossa on laajuus, hinta ja aikataulu.</li>
+        </ol>
+      </div>
+    </aside>
+    <form class="contact-form" name="contact" action="mailto:hello@webaur.com" method="post" enctype="text/plain" novalidate>
+      <p class="hp" aria-hidden="true"><label>Company website <input type="text" name="company-website" tabindex="-1" autocomplete="off" /></label></p>
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Nimi</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="business">Yrityksen nimi</label>
+          <input id="business" name="business" type="text" autocomplete="organization" required />
+        </div>
       </div>
       <div class="field">
-        <label for="business">Yrityksen nimi</label>
-        <input id="business" name="business" type="text" autocomplete="organization" required />
+        <label for="email">Sähköpostiosoitteesi</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" data-mail-label="Sähköposti" required />
       </div>
-      <div class="field">
-        <label for="email">Sähköposti</label>
-        <input id="email" name="email" type="email" autocomplete="email" required />
-      </div>
-      <div class="field">
-        <label for="type">Sivuston tyyppi</label>
-        <select id="type" name="type" required>
-          <option value="">Valitse</option>
-          <option>Uusi verkkosivusto</option>
-          <option>Uudistus</option>
-          <option>Laskeutumissivu</option>
-          <option>Muu</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="budget">Arvioitu budjetti (valinnainen)</label>
-        <select id="budget" name="budget">
-          <option value="">En halua kertoa</option>
-          <option value="starter">Aloitus — noin 490 € + ALV</option>
-          <option value="business">Yritys — noin 890 € + ALV</option>
-          <option value="premium">Premium — noin 1 490 € + ALV</option>
-          <option value="unsure">En ole vielä varma</option>
-        </select>
+      <div class="field-row">
+        <div class="field">
+          <label for="type">Sivuston tyyppi</label>
+          <select id="type" name="type" required>
+            <option value="">Valitse</option>
+            <option>Uusi verkkosivusto</option>
+            <option>Nykyisen sivuston uudistus</option>
+            <option>Yksisivuinen sivusto</option>
+            <option>Muu</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">Paketti (valinnainen)</label>
+          <select id="budget" name="budget">
+            <option value="">En osaa vielä sanoa</option>
+            <option value="starter">Aloitus — 490 € + ALV</option>
+            <option value="business">Yritys — 890 € + ALV</option>
+            <option value="premium">Premium — 1&nbsp;490 € + ALV</option>
+            <option value="unsure">Tarvitsen apua valintaan</option>
+          </select>
+        </div>
       </div>
       <div class="field">
         <label for="website">Nykyinen verkkosivusto (valinnainen)</label>
-        <input id="website" name="website" type="url" autocomplete="url" placeholder="https://" />
+        <input id="website" name="website" type="url" autocomplete="url" inputmode="url" placeholder="https://" />
       </div>
       <div class="field">
-        <label for="message">Kuvaus projektista</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="message">Kerro projektista</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
       </div>
       <label class="consent">
         <input id="consent" type="checkbox" name="consent" value="yes" required />
-        <span>Hyväksyn, että WEBAUR käyttää näitä tietoja vastatakseen kyselyyni. Lue <a href="privacy.html">tietosuojaseloste</a>.</span>
+        <span>Hyväksyn, että WEBAUR käyttää näitä tietoja vastatakseen yhteydenottooni. Lue <a href="privacy.html">tietosuojaseloste</a>.</span>
       </label>
-      <button class="btn btn-accent" type="submit" data-label="Lähetä viesti">Lähetä viesti</button>
-      <p class="form-note">Lomake ei väitä viestiä lähetetyksi, ellei kytketty palvelu ole ottanut sitä vastaan.</p>
-      <p class="form-alert" id="form-status" hidden tabindex="-1" role="status"></p>
+      <button class="btn btn-accent btn-block" type="submit" data-label="Avaa valmis sähköposti">Avaa valmis sähköposti</button>
+      <p class="form-note">Painike avaa oman sähköpostiohjelmasi, jossa viesti on valmiiksi täytettynä. Viesti lähtee vasta, kun painat siellä Lähetä. Jos mitään ei avaudu, kirjoita osoitteeseen <a href="mailto:hello@webaur.com" data-email-slot>hello@webaur.com</a>.</p>
+      <div class="form-alert" id="form-status" hidden tabindex="-1" role="status" aria-live="polite"></div>
     </form>
   </div>
 </section>
@@ -116,7 +138,7 @@
   <div class="wrap footer-grid">
     <div>
       <a class="logo" href="index.html" aria-label="WEBAUR"><span class="wm">WEB<span class="wm-a">A</span>UR</span></a>
-      <p class="footer-note" style="margin-top:16px;max-width:28rem">Itsenäinen verkkosuunnittelustudio. Suunnittelemme ja rakennamme nykyaikaisia sivustoja, jotka auttavat yritystä erottumaan ja muuttamaan kävijät asiakkaiksi.</p>
+      <p class="footer-note">Itsenäinen verkkosuunnittelustudio. Suunnittelemme ja rakennamme nykyaikaisia sivustoja, jotka auttavat yritystä erottumaan ja muuttamaan kävijät asiakkaiksi.</p>
     </div>
     <div>
       <ul class="footer-col">
@@ -135,8 +157,8 @@
     </div>
     <div>
       <ul class="footer-col">
-        <li><strong>Yhteys</strong></li>
-        <li class="js-email-wrap" hidden>Sähköposti: <span data-email-slot></span></li>
+        <li><strong>Ota yhteyttä</strong></li>
+        <li class="js-email-wrap footer-email"><a href="mailto:hello@webaur.com" data-email-slot>hello@webaur.com</a></li>
         <li><a href="contact.html">Yhteystiedot</a></li>
         <li><a href="privacy.html">Tietosuoja</a></li>
         <li class="lang-switch" style="margin-top:8px"><a href="contact.html" lang="fi" hreflang="fi" aria-current="true">FI</a><span class="sep" aria-hidden="true"> / </span><a href="en/contact.html" lang="en" hreflang="en">EN</a></li>
@@ -145,7 +167,7 @@
   </div>
   <div class="wrap legal">
     <span>© 2026 WEBAUR. Kaikki oikeudet pidätetään.</span>
-    <span>Itsenäinen suunnittelustudio.</span>
+    <span>Itsenäinen suunnittelustudio Suomesta.</span>
   </div>
 </footer>
 <script src="js/site-config.js"></script>

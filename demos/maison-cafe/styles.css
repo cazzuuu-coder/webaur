@@ -199,3 +199,34 @@ h2{font-size:clamp(2.1rem, 4.2vw, 3.5rem)}
 }
 
 @media (max-width:767px){#reserve-form > div{grid-template-columns:1fr !important}}
+
+/* v6.1 — mobile polish: menu containing block, readable labels, tap targets, safe areas */
+:root{--pad:max(clamp(1.15rem, 4.2vw, 3.25rem), env(safe-area-inset-left,0px), env(safe-area-inset-right,0px))}
+.site-header{background:transparent;backdrop-filter:none}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--paper) 90%, transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.wordmark{min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+@media (max-width:767px){
+  .concept-mark{font-size:.75rem;letter-spacing:.08em;min-height:44px;display:inline-flex;align-items:center;line-height:1.25;padding:.3rem .5rem;max-width:9.5rem}
+  .wordmark span{font-size:.75rem}
+  .eyebrow{font-size:.75rem}
+  .btn{min-height:46px;font-size:.78rem}
+  .menu-index a{display:inline-flex;align-items:center;min-height:44px;font-size:.75rem;padding-bottom:0}
+  .item-price small{font-size:.75rem}
+  .nav-links{padding-bottom:calc(1.5rem + env(safe-area-inset-bottom,0px));gap:0}
+  .nav-links li{width:100%;border-bottom:1px solid var(--line)}
+  .nav-links a{display:flex;align-items:center;min-height:56px}
+  .site-footer{padding-bottom:env(safe-area-inset-bottom,0px)}
+  .site-footer a{display:inline-flex;align-items:center;min-height:44px}
+}
+.menu-toggle span{transition:transform .25s ease}
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.75px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+@media (max-width:767px){.nav-links{justify-content:flex-start;overflow:auto}}
+@media (min-width:768px) and (max-width:1023px){
+  .concept-mark{font-size:.75rem;min-height:44px;display:inline-flex;align-items:center}
+  .wordmark span,.eyebrow,.item-price small{font-size:.75rem}
+  .nav-links a{display:inline-flex;align-items:center;min-height:44px;font-size:.75rem}
+  .btn{min-height:44px;font-size:.78rem}
+  .menu-index a{display:inline-flex;align-items:center;min-height:44px;font-size:.75rem;padding-bottom:0}
+  .site-footer a{display:inline-flex;align-items:center;min-height:44px}
+}

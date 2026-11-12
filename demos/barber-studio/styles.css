@@ -333,3 +333,42 @@ body.lb-open{overflow:hidden}
   *,*::before,*::after{animation:none !important;transition:none !important}
   .btn:hover,.mosaic figure:hover img{transform:none}
 }
+
+/* v6.1 — mobile polish: menu containing block, readable labels, tap targets, safe areas */
+:root{--pad:max(clamp(1.25rem, 4vw, 3.25rem), env(safe-area-inset-left,0px), env(safe-area-inset-right,0px))}
+.site-header{background:transparent;backdrop-filter:none}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--paper) 88%, transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.logo{min-height:44px}
+@media (max-width:767px){
+  .concept-rail{font-size:.75rem;letter-spacing:.1em;gap:.5rem}
+  .concept-rail a{position:relative}
+  .concept-rail a::after{content:"";position:absolute;inset:-.7rem -.25rem}
+  .logo-sub{font-size:.75rem}
+  .kicker,.eyebrow{font-size:.75rem}
+  .hero-meta{font-size:.75rem}
+  .hero-cutline{font-size:.75rem}
+  .craft-list strong,.field label{font-size:.75rem}
+  .btn{min-height:46px;font-size:.78rem}
+  .nav-links{padding-bottom:calc(2rem + env(safe-area-inset-bottom,0px));gap:0}
+  .nav-links li{width:100%;border-bottom:1px solid var(--rule)}
+  .nav-links li:last-child{border-bottom:0;padding-top:1.25rem}
+  .nav-links a{display:flex;align-items:center;min-height:56px}
+  .nav-links a.nav-cta{display:inline-flex;justify-content:center;width:100%;font-family:inherit;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+  .site-footer a,.foot-grid a{display:inline-flex;align-items:center;min-height:44px}
+  .foot-legal{padding-bottom:env(safe-area-inset-bottom,0px)}
+}
+@media (min-width:768px) and (max-width:1023px){
+  .concept-rail{font-size:.75rem}
+  .concept-rail a{position:relative}
+  .concept-rail a::after{content:"";position:absolute;inset:-.7rem -.25rem}
+  .logo-sub,.kicker,.eyebrow,.hero-meta,.hero-cutline,.craft-list strong,.field label{font-size:.75rem}
+  .nav-links a{display:inline-flex;align-items:center;min-height:44px;font-size:.75rem}
+  .btn{min-height:44px;font-size:.78rem}
+  .site-footer a,.foot-grid a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media (max-width:767px){
+  .concept-rail{height:auto;min-height:var(--rail);padding:.45rem var(--pad);text-align:center;flex-wrap:wrap;row-gap:.15rem;line-height:1.35}
+}
+@media (max-width:400px){
+  .concept-rail{letter-spacing:.06em}
+}
