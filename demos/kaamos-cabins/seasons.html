@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seasons — Kaamos Cabins, Inari · Concept demo by WEBAUR</title>
+<meta name="description" content="Winter or summer in Inari, Lapland: polar night and northern lights, or midnight sun. An interactive season guide on a fictional cabin site, WEBAUR Premium package concept demo.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Seasons — Kaamos Cabins, Inari · Concept demo by WEBAUR">
+<meta property="og:description" content="Winter or summer in Inari, Lapland: polar night and northern lights, or midnight sun. An interactive season guide on a fictional cabin site, WEBAUR Premium package concept demo.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-1600.webp">
+<meta name="theme-color" content="#0A0F1A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/syne-normal-2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-grotesk-normal-1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+</head>
+<body class="is-seasons">
+<a class="skip" href="#main">Skip to content</a>
+<div class="curtain" aria-hidden="true"></div>
+<p class="concept" role="note"><span class="concept__dot" aria-hidden="true"></span><span>Concept demo · fictional business</span><span class="concept__sep" aria-hidden="true">·</span><span><a href="../../en/pricing.html#pkg-premium">WEBAUR <b>Premium</b> package example</a></span></p>
+<header class="top">
+  <a class="logo" href="index.html" aria-label="Kaamos Cabins, home">
+    <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M4 30 L22 12 L40 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M8 22c6-9 22-9 28 0" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" opacity=".95"/><rect x="18.5" y="23" width="7" height="7" fill="#F2B66D"/><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#7CF0B5"/><stop offset="1" stop-color="#5BC7E6"/></linearGradient></defs></svg>
+    <span>Kaamos<small>Cabins · Inari</small></span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="cabins.html">Cabins</a><a href="experiences.html">Experiences</a><a href="seasons.html" aria-current="page">Seasons</a><a href="gallery.html">Gallery</a><a href="story.html">Story</a><a class="btn btn--glow nav__cta" href="book.html">Request dates <span class="arr" aria-hidden="true">→</span></a></nav>
+  <p class="clock" aria-label="Local time in Inari"><span class="clock__l">Inari</span> <time class="clock__t">--:--</time></p>
+  <a class="btn btn--glow top__cta" href="book.html">Request dates</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="nav"><span class="sr">Menu</span><i></i><i></i></button>
+</header>
+<main id="main">
+<section class="season" data-season="winter">
+  <div class="season__media" aria-hidden="true">
+    <div class="season__img is-on" data-for="winter"><img src="img/aerial-1600.webp" srcset="img/aerial-800.webp 800w, img/aerial-1600.webp 1280w" sizes="100vw" width="1280" height="720" alt="" fetchpriority="high"></div>
+    <div class="season__img" data-for="summer"><img src="img/summer-1600.webp" srcset="img/summer-800.webp 800w, img/summer-1600.webp 1280w" sizes="100vw" width="1280" height="720" alt="" loading="lazy" decoding="async"></div>
+  </div>
+  <div class="season__in">
+    <p class="kicker">Seasons</p>
+    <h1 class="split-lines">Two seasons.<br>Two kinds of light.</h1>
+    <div class="toggle" role="radiogroup" aria-label="Season">
+      <button type="button" role="radio" aria-checked="true" data-s="winter" id="winter">Winter</button><button type="button" role="radio" aria-checked="false" data-s="summer" id="summer">Summer</button><span class="toggle__knob" aria-hidden="true"></span>
+    </div>
+    <div class="season__copy">
+      <div class="scopy is-on" data-for="winter"><p class="scopy__k">November – April</p><p>Snow from October to May, polar night around Christmas and the northern lights on clear nights. Days are short and blue, evenings are for the sauna and the sky.</p><ul><li>Aurora on clear, dark nights</li><li>Husky, snowshoe and ski trails</li><li>Temperatures often well below zero</li></ul></div>
+      <div class="scopy" data-for="summer" hidden><p class="scopy__k">June – August</p><p>For about two months the sun doesn’t set. Lakes are still, the forest smells of pine and you can paddle at midnight in full daylight.</p><ul><li>Midnight sun from late May</li><li>Paddling, hiking and lake swims</li><li>Berries and autumn colours from August</li></ul></div>
+    </div>
+  </div>
+</section>
+<section class="year">
+  <header class="row-head"><div><p class="kicker rv">The year at Kaamos</p><h2 class="split-lines">Month by month.</h2></div><p class="row-head__note rv">Bar height shows roughly how many hours of daylight there are mid-month. Tap a month to see what it’s like.</p></header>
+  <div class="months" role="group" aria-label="Months"><button type="button" class="m m--winter" data-i="0" style="--h:0.125" aria-pressed="true" aria-label="Jan, about 3 hours of daylight"><span>Jan</span></button><button type="button" class="m m--winter" data-i="1" style="--h:0.333" aria-pressed="false" aria-label="Feb, about 8 hours of daylight"><span>Feb</span></button><button type="button" class="m m--winter" data-i="2" style="--h:0.500" aria-pressed="false" aria-label="Mar, about 12 hours of daylight"><span>Mar</span></button><button type="button" class="m m--winter" data-i="3" style="--h:0.667" aria-pressed="false" aria-label="Apr, about 16 hours of daylight"><span>Apr</span></button><button type="button" class="m m--summer" data-i="4" style="--h:0.875" aria-pressed="false" aria-label="May, about 21 hours of daylight"><span>May</span></button><button type="button" class="m m--summer" data-i="5" style="--h:1.000" aria-pressed="false" aria-label="Jun, about 24 hours of daylight"><span>Jun</span></button><button type="button" class="m m--summer" data-i="6" style="--h:1.000" aria-pressed="false" aria-label="Jul, about 24 hours of daylight"><span>Jul</span></button><button type="button" class="m m--summer" data-i="7" style="--h:0.708" aria-pressed="false" aria-label="Aug, about 17 hours of daylight"><span>Aug</span></button><button type="button" class="m m--summer" data-i="8" style="--h:0.542" aria-pressed="false" aria-label="Sep, about 13 hours of daylight"><span>Sep</span></button><button type="button" class="m m--winter" data-i="9" style="--h:0.375" aria-pressed="false" aria-label="Oct, about 9 hours of daylight"><span>Oct</span></button><button type="button" class="m m--winter" data-i="10" style="--h:0.167" aria-pressed="false" aria-label="Nov, about 4 hours of daylight"><span>Nov</span></button><button type="button" class="m m--winter" data-i="11" style="--h:0.000" aria-pressed="false" aria-label="Dec, about 0 hours of daylight"><span>Dec</span></button><span class="months__bar" aria-hidden="true"></span></div>
+  <div class="mdetail" aria-live="polite"><p class="mdetail__m">January <span class="mdetail__h">≈ 3 h daylight</span></p><h3 class="mdetail__t">Blue days, deep snow</h3><p class="mdetail__d">Short blue-hour days and the best aurora nights.</p></div>
+  <script type="application/json" id="months-data">[{"m": "Jan", "s": "winter", "t": "Blue days, deep snow", "d": "Short blue-hour days and the best aurora nights.", "h": 3}, {"m": "Feb", "s": "winter", "t": "Bright snow", "d": "Sun returns, cold clear skies, great for skiing.", "h": 8}, {"m": "Mar", "s": "winter", "t": "Spring winter", "d": "Long sunny days on deep snow. Aurora still strong.", "h": 12}, {"m": "Apr", "s": "winter", "t": "Crust snow", "d": "Walk on frozen snow crust in sunshine.", "h": 16}, {"m": "May", "s": "summer", "t": "Thaw", "d": "Ice melts, birds return. A quiet month.", "h": 21}, {"m": "Jun", "s": "summer", "t": "Midnight sun", "d": "The sun doesn\u2019t set. Lakes are calm and light.", "h": 24}, {"m": "Jul", "s": "summer", "t": "Midnight sun", "d": "Warmest month. Paddle and swim at midnight.", "h": 24}, {"m": "Aug", "s": "summer", "t": "Berries", "d": "Blueberries, cloudberries and the first dark nights.", "h": 17}, {"m": "Sep", "s": "summer", "t": "Ruska", "d": "Autumn colours and the first northern lights.", "h": 13}, {"m": "Oct", "s": "winter", "t": "First snow", "d": "Dark evenings, first snow, an empty forest.", "h": 9}, {"m": "Nov", "s": "winter", "t": "Into kaamos", "d": "Days get very short. Aurora season is on.", "h": 4}, {"m": "Dec", "s": "winter", "t": "Polar night", "d": "The sun stays below the horizon. Candles and stars.", "h": 0}]</script>
+</section>
+<section class="cta-full">
+  <div class="cta-full__bg" aria-hidden="true"><img src="img/aerial-1600.webp" srcset="img/aerial-800.webp 800w, img/aerial-1600.webp 1280w" sizes="100vw" width="1280" height="720" alt="" loading="lazy" decoding="async" data-parallax=".14"></div>
+  <div class="cta-full__in">
+    <p class="kicker rv">Plan your stay</p>
+    <h2 class="split-lines">Pick a season.<br>We’ll keep the fire going.</h2>
+    <a class="btn btn--glow rv" href="book.html">Request dates <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot__big" aria-hidden="true">KAAMOS</div>
+  <div class="foot__grid">
+    <div><p class="foot__h">Kaamos Cabins</p><p>Three design cabins in the forest near Inari, Finnish Lapland. Open all year.</p></div>
+    <nav aria-label="Footer"><p class="foot__h">Explore</p><ul><li><a href="index.html">Home</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="seasons.html">Seasons</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="story.html">Story</a></li><li><a href="book.html">Request dates</a></li></ul></nav>
+    <div><p class="foot__h">Contact</p><p><a href="mailto:stay@kaamos.example">stay@kaamos.example</a><br>+358 40 000 0000<br>Example Road 1, 99870 Inari</p></div>
+  </div>
+  <p class="foot__note">Kaamos Cabins is a <b>fictional business</b>. This website is a concept demo designed by <a href="../../en/work.html"><b>WEBAUR</b></a> to show the Premium package (€1,490): up to eight pages with a more distinctive design, considered animation and interactive details. Names, prices, partners and contact details are examples, and the images were created for this concept.</p>
+</footer>
+<script src="js/main.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e34d2642749c4351981fb41200f366be"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

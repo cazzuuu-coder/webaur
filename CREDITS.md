@@ -119,3 +119,13 @@ All demo typefaces are licensed under the SIL Open Font License 1.1 and are serv
 The WEBAUR studio site continues to use self-hosted Instrument Serif and Geist. The same demo faces are also loaded on the case-study pages so type specimens match the live demos.
 
 Photography sources are unchanged from the tables above. Portfolio frames in `images/work/` were recaptured from the rebuilt v6 demos.
+
+## Package example demos (`demos/kaari-bike-works/`, `demos/ankkuri-physio/`, `demos/kaamos-cabins/`)
+
+One example per package: Kaari Bike Works (Starter), Ankkuri Physiotherapy (Business) and Kaamos Cabins (Premium). All three are fictional concept brands; names, people, addresses, prices, partners and contact details are examples.
+
+All images in these demos were generated with AI image tools for this project, then resized and encoded as WebP. They do not depict real businesses, premises, staff or customers. Maps are hand-drawn SVG illustrations, not real maps.
+
+Fonts are self-hosted under the [SIL Open Font License 1.1](https://openfontlicense.org/): Archivo (Kaari), Young Serif and Figtree (Ankkuri), Syne and Hanken Grotesk (Kaamos).
+
+Portfolio frames in `images/work/{kaari,ankkuri,kaamos}/` are original screenshots of those demos at 1440 and 390 CSS pixels, encoded as WebP and JPEG.

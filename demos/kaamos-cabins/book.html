@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Request dates — Kaamos Cabins, Inari · Concept demo by WEBAUR</title>
+<meta name="description" content="Send a stay request for a fictional cabin near Inari: choose a cabin, dates, guests and add-ons. A WEBAUR Premium package concept demo.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Request dates — Kaamos Cabins, Inari · Concept demo by WEBAUR">
+<meta property="og:description" content="Send a stay request for a fictional cabin near Inari: choose a cabin, dates, guests and add-ons. A WEBAUR Premium package concept demo.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-1600.webp">
+<meta name="theme-color" content="#0A0F1A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/syne-normal-2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-grotesk-normal-1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<div class="curtain" aria-hidden="true"></div>
+<p class="concept" role="note"><span class="concept__dot" aria-hidden="true"></span><span>Concept demo · fictional business</span><span class="concept__sep" aria-hidden="true">·</span><span><a href="../../en/pricing.html#pkg-premium">WEBAUR <b>Premium</b> package example</a></span></p>
+<header class="top">
+  <a class="logo" href="index.html" aria-label="Kaamos Cabins, home">
+    <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M4 30 L22 12 L40 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M8 22c6-9 22-9 28 0" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round" opacity=".95"/><rect x="18.5" y="23" width="7" height="7" fill="#F2B66D"/><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#7CF0B5"/><stop offset="1" stop-color="#5BC7E6"/></linearGradient></defs></svg>
+    <span>Kaamos<small>Cabins · Inari</small></span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="cabins.html">Cabins</a><a href="experiences.html">Experiences</a><a href="seasons.html">Seasons</a><a href="gallery.html">Gallery</a><a href="story.html">Story</a><a class="btn btn--glow nav__cta" href="book.html">Request dates <span class="arr" aria-hidden="true">→</span></a></nav>
+  <p class="clock" aria-label="Local time in Inari"><span class="clock__l">Inari</span> <time class="clock__t">--:--</time></p>
+  <a class="btn btn--glow top__cta" href="book.html">Request dates</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="nav"><span class="sr">Menu</span><i></i><i></i></button>
+</header>
+<main id="main">
+<section class="phead">
+  <div class="phead__in">
+    <p class="kicker rv">Request dates</p>
+    <h1 class="split-lines">Tell us when<br>you’d like to come.</h1>
+    <p class="phead__lead rv">Send a request and we’ll reply within a day with availability and a price. Nothing is booked or paid until you confirm.</p>
+  </div>
+</section>
+<section class="book">
+  <form class="bform" novalidate>
+    <fieldset><legend>1 · Cabin</legend><div class="copts"><label class="copt"><input type="radio" name="cabin" value="revontuli" checked><span class="copt__in"><img src="img/hero-1600.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1280w" sizes="200px" width="1280" height="720" alt="" loading="lazy" decoding="async"><span class="copt__t"><b>Revontuli</b><small>2–4 guests · from €320</small></span></span></label><label class="copt"><input type="radio" name="cabin" value="kuura"><span class="copt__in"><img src="img/bedroom-1600.webp" srcset="img/bedroom-800.webp 800w, img/bedroom-1600.webp 1152w" sizes="200px" width="1152" height="864" alt="" loading="lazy" decoding="async"><span class="copt__t"><b>Kuura</b><small>2 guests · from €260</small></span></span></label><label class="copt"><input type="radio" name="cabin" value="tunturi"><span class="copt__in"><img src="img/interior-1600.webp" srcset="img/interior-800.webp 800w, img/interior-1600.webp 1152w" sizes="200px" width="1152" height="864" alt="" loading="lazy" decoding="async"><span class="copt__t"><b>Tunturi</b><small>4–6 guests · from €480</small></span></span></label></div></fieldset>
+    <fieldset><legend>2 · Dates &amp; guests</legend>
+      <div class="frow"><div class="field"><label for="b-in">Arrival</label><input id="b-in" name="arrive" type="date" required></div><div class="field"><label for="b-out">Departure</label><input id="b-out" name="depart" type="date" required></div></div>
+      <div class="frow"><div class="field"><span class="flabel" id="g-l">Guests</span><div class="stepper" role="group" aria-labelledby="g-l"><button type="button" data-step="-1" aria-label="One guest fewer">−</button><output name="guests" aria-live="polite">2</output><button type="button" data-step="1" aria-label="One guest more">+</button></div></div>
+      <div class="field"><span class="flabel">Add-ons</span><div class="checks"><label><input type="checkbox" name="addon" value="Aurora night"> Aurora night</label><label><input type="checkbox" name="addon" value="Husky trail"> Husky trail</label><label><input type="checkbox" name="addon" value="Breakfast basket"> Breakfast basket</label></div></div></div>
+    </fieldset>
+    <fieldset><legend>3 · Your details</legend>
+      <div class="frow"><div class="field"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div><div class="field"><label for="b-email">Email</label><input id="b-email" name="email" type="email" autocomplete="email" required></div></div>
+      <div class="field"><label for="b-msg">Anything we should know?</label><textarea id="b-msg" name="message" rows="4"></textarea></div>
+    </fieldset>
+    <div class="bform__foot"><button class="btn btn--glow" type="submit">Send request <span class="arr" aria-hidden="true">→</span></button><p class="bform__status" role="status" aria-live="polite"></p></div>
+  </form>
+  <aside class="summary" aria-label="Your request">
+    <div class="summary__in">
+      <p class="kicker">Your request</p>
+      <p class="summary__cabin">Revontuli cabin</p>
+      <dl><div><dt>Dates</dt><dd class="s-dates">Choose dates</dd></div><div><dt>Nights</dt><dd class="s-nights">–</dd></div><div><dt>Guests</dt><dd class="s-guests">2</dd></div><div><dt>Add-ons</dt><dd class="s-add">None</dd></div><div class="summary__est"><dt>Estimate</dt><dd class="s-est">–</dd></div></dl>
+      <p class="summary__small">Estimate uses example prices. This is a request form, not a booking system, and in this concept demo nothing is sent.</p>
+    </div>
+  </aside>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot__big" aria-hidden="true">KAAMOS</div>
+  <div class="foot__grid">
+    <div><p class="foot__h">Kaamos Cabins</p><p>Three design cabins in the forest near Inari, Finnish Lapland. Open all year.</p></div>
+    <nav aria-label="Footer"><p class="foot__h">Explore</p><ul><li><a href="index.html">Home</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="seasons.html">Seasons</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="story.html">Story</a></li><li><a href="book.html">Request dates</a></li></ul></nav>
+    <div><p class="foot__h">Contact</p><p><a href="mailto:stay@kaamos.example">stay@kaamos.example</a><br>+358 40 000 0000<br>Example Road 1, 99870 Inari</p></div>
+  </div>
+  <p class="foot__note">Kaamos Cabins is a <b>fictional business</b>. This website is a concept demo designed by <a href="../../en/work.html"><b>WEBAUR</b></a> to show the Premium package (€1,490): up to eight pages with a more distinctive design, considered animation and interactive details. Names, prices, partners and contact details are examples, and the images were created for this concept.</p>
+</footer>
+<script src="js/main.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e34d2642749c4351981fb41200f366be"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
