@@ -68,7 +68,7 @@ Budget can be pre-filled with `?package=starter|business|premium#form`.
 - Business €890 (recommended) — up to 5 separate pages in one website
 - Premium €1,490 — up to 8 separate pages, plus more individual design and light animations
 
-One-time payment. The customer owns the site and receives the source code, files and publishing/transfer instructions; no monthly fees or service agreements are offered. Not included: yearly domain fee, hosting, online stores, extensive booking systems, other special features, and new change work after launch (done on request for a separately agreed one-time fee). Package copy lives in `PKG` / `TXT` in `_tools/build_pages.py`.
+One-time payment. The customer owns the site and receives the source code, files and publishing/transfer instructions; no monthly fees or service agreements are offered. Online stores on request: small (e.g. under ~30 products on a ready platform such as Shopify, client pays the platform fee) from €1,900, larger by quote; not in package prices. Not included: yearly domain fee, hosting, extensive booking systems, other special features, and new change work after launch (done on request for a separately agreed one-time fee). Package copy lives in `PKG` / `TXT` in `_tools/build_pages.py`.
 
 ## Still to complete before a full commercial launch
 
